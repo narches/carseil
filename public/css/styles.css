@@ -81,11 +81,14 @@ header a:hover {
 
 .welcome h1{
   text-align: left;
+  color:black;
+  font-weight: boldest;
   font-size: xx-large;
   margin-top: 20px;
   margin-bottom: 20px;
-  margin-left: 40px;
+  margin-left: 70px;
 }
+
 .hero img {
   max-width: 50%;
   max-height: 30%;

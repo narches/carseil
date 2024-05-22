@@ -1,3 +1,19 @@
 {
-    "iis.configDir": ""
+    "iis.configDir": "",
+    "sqltools.connections": [
+        {
+            "pgOptions": {
+                "ssl": {
+                    "rejectUnauthorized": true
+                }
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "driver": "PostgreSQL",
+            "database": "webr",
+            "username": "webr_user",
+            "name": "webr",
+            "connectString": "postgres://webr_user:A7FyDKnpv7cnFc6liQxcOAC53bpFFKJ7@dpg-coqgjqv79t8c738h215g-a.frankfurt-postgres.render.com/webr"
+        }
+    ]
 }
