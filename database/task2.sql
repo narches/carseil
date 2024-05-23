@@ -253,5 +253,12 @@ WHERE inv_make = 'GM' AND inv_model = 'Hummer' AND inv_year = '2016';
 
 -- ADDING VEHICLES --
 UPDATE public.inventory
-SET inv_image = CONCAT(SUBSTRING(inv_image FROM 1 FOR 8), '/vehicles', SUBSTRING(inv_image FROM 9)),
-    inv_thumbnail = CONCAT(SUBSTRING(inv_thumbnail FROM 1 FOR 8), '/vehicles', SUBSTRING(inv_thumbnail FROM 9));
+SET inv_image = REPLACE(
+  inv_image,
+  '/images/',
+  '/images/vehicles/'
+), inv_thumbnail = REPLACE(
+  inv_thumbnail,
+  '/images/',
+  '/images/vehicles/'
+);

@@ -10,13 +10,13 @@
 
 body {
   text-align:center;
-  color: #0ADDF5;
+  color: #00cbe6;
   font-family:'Onest',Courier New,monospace,Arial,sans-serif
 }
 
 header a {
-  color: #0ADDF5;
-  border-bottom: 2px solid #0ADDF5;
+  color: #00cbe6;
+  border-bottom: 2px solid #00cbe6;
 }
 
 header a:hover {
@@ -58,25 +58,25 @@ header a:hover {
 .rivers-card {
   grid-column:1/3;
   grid-row: 1/2;
-  background-color:#0ADDF5;
+  background-color:#00cbe6;
 }
 
 .camping-card {
   grid-column:3/5;
   grid-row: 1/2;
-  background-color:#0ADDF5;
+  background-color:#00cbe6;
 }
 
 .rapids-card {
   grid-column:1/3;
   grid-row: 2/3;
-  background-color:#0ADDF5;
+  background-color:#00cbe6;
 }
 
 .rocki-card {
   grid-column:3/5;
   grid-row: 2/3;
-  background-color:#0ADDF5;
+  background-color:#00cbe6;
 }
 
 .welcome h1{
@@ -119,7 +119,7 @@ a{
   text-decoration: none;
 }
 a:hover {
-  color: #0ADDF5;
+  color: #00cbe6;
   text-decoration: none;
 }
 
@@ -129,23 +129,23 @@ a:hover {
     transform:translate(-50%,-50%);
     display:inline-block;
     text-decoration:none;
-    border:2px solid #0ADDF5;;
+    border:2px solid #00cbe6;;
     padding:10px 20px;
     width: 70%;
-    background:#0ADDF5;
+    background:#00cbe6;
     margin: 0px;    
 }
     
 .home-btn:hover {
-  border:2px solid #0ADDF5;
-  color: #0ADDF5;
+  border:2px solid #00cbe6;
+  color: #00cbe6;
   border-radius: 10px;
   background: transparent;
 }
 
 h3 {
   background-color:black;
-  color:#0ADDF5;
+  color:#00cbe6;
   padding:10px;
   justify-content:center;
   align-items:center
@@ -161,7 +161,7 @@ section {
   }
 
 .home-btn a:hover{
-  color: #0ADDF5;
+  color: #00cbe6;
 }
 
 #menu li a{
@@ -187,7 +187,7 @@ display:flex;
 list-style:none;
 background: black;
 text-align:center;
-color: #0ADDF5;
+color: #00cbe6;
 padding:10px;
 justify-content:space-around;
 transition:.5s;
@@ -195,6 +195,36 @@ transition:.5s;
 
 nav a:hover {
   border-bottom: none;
+}
+#navigate {
+  display:flex;
+  background: black;
+  text-align:center;
+  padding:10px;
+  justify-content:space-around;
+}
+
+#navigate li {
+  list-style:none;
+  text-align:center;
+  justify-content:space-around;
+  transition:.5s;
+}
+
+#navigate li a {
+  color: white;
+}
+
+#inv-display{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2px;
+  max-width: 100%;
+  padding: 1px;
+}
+#inv-display li {
+  list-style:none;
+  text-align:center;
 }
 
 header{
@@ -212,14 +242,14 @@ header span a{
 }
 
 header span a :hover {
-  color:#0ADDF5;
+  color:#00cbe6;
   background-color:black;
   transition:.3s;
   text-decoration:none;
 }
 
 #tools{
-  color:#0ADDF5;
+  color:#00cbe6;
   text-align: right;
   padding:10px;
 }
@@ -237,7 +267,7 @@ header span a :hover {
 }
 
 #menu li a:hover {
-  color:#0ADDF5;
+  color:#00cbe6;
   background-color:black;
   transform:scale(1.1);
   transition:.3s;
@@ -249,9 +279,9 @@ header span a :hover {
 }
 
 button {
-  color: #0ADDF5;
+  color: #00cbe6;
   padding: 4px 8px;
-  border: 2px solid #0ADDF5;
+  border: 2px solid #00cbe6;
   background-color: black;
 }
 
@@ -260,7 +290,7 @@ button:hover{
 }
 
 .active {  
-  border-bottom: 2px solid #0ADDF5;
+  border-bottom: 2px solid #00cbe6;
 }
     
 
@@ -277,6 +307,11 @@ button:hover{
   margin-bottom:5%
 }
 
+#inv-display {
+  display:block;
+  height:auto;
+}
+
 .hero img {
   width: 100%;
   height: 100%;
@@ -286,24 +321,24 @@ button:hover{
 
 h3 {
 background-color:black;
-color:#0ADDF5;
+color:#00cbe6;
 padding:10px;
 justify-content:center;
 align-items:center
 }
 
-.card-img {
+#inv-dispay img {
 text-align:center;
 transition:transform .2s;
 box-shadow:1px 1px 1px black;
 }
 
-.card-img:hover {
+#inv-display-img:hover {
 opacity:.6;
 transform:scale(1.1);
 }
 
-main section img {
+#inv-display img {
 box-sizing:border-box
 }
 
@@ -317,7 +352,7 @@ box-shadow:0 0 30px black;
 border-radius:5px;
 }
 
-img {
+#inv-display img {
 margin-top:5px
 }
 
@@ -359,6 +394,9 @@ margin-top:5px
 border-radius:4px;
 }
 
+img {
+  margin-top:5px
+}
 
 h2 {
 margin:0;
@@ -371,7 +409,7 @@ color:#0ADDF5
 @media screen and (max-width: 680px) {
 
 .list section img {
-display:none
+display:none;
 }
 
 #hamburger-icon {
@@ -409,9 +447,9 @@ margin:6px 0;
 transition:.4;
 }
 
-nav ul {
+/* nav ul {
 display:none;
-}
+} */
 
 .hero-label {
   position: relative;
@@ -431,17 +469,20 @@ display:none;
   transform:translate(-50%,-50%);
   display:inline-block;
   text-decoration:none;
-  border:2px solid #0ADDF5;;
+  border:2px solid #00cbe6;;
   padding:10px 20px;
   width: 70%;
-  background:#0ADDF5;
+  background:#00cbe6;
+}
 
-  
+#inv-display {
+  display:block;
+  height:auto;
 }
   
 .home-btn:hover {
-  border:2px solid #0ADDF5;
-  color: #0ADDF5;
+  border:2px solid #00cbe6;
+  color: #00cbe6;
   border-radius: 10px;
   background: transparent;
 }
@@ -450,7 +491,7 @@ a{
   text-decoration: none;
 }
 a:hover {
-  color: #0ADDF5;
+  color: #00cbe6;
   text-decoration: none;
 }
 }

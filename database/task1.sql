@@ -28,5 +28,12 @@ INNER JOIN public.classification AS cls ON inv.classification_id = cls.classific
 WHERE cls.classification_name = 'Sport';
 
 UPDATE public.inventory
-SET inv_image = CONCAT(SUBSTRING(inv_image FROM 1 FOR 8), '/vehicles', SUBSTRING(inv_image FROM 9)),
-    inv_thumbnail = CONCAT(SUBSTRING(inv_thumbnail FROM 1 FOR 8), '/vehicles', SUBSTRING(inv_thumbnail FROM 9));
+SET inv_image = REPLACE(
+  inv_image,
+  '/images/',
+  '/images/vehicles/'
+), inv_thumbnail = REPLACE(
+  inv_thumbnail,
+  '/images/',
+  '/images/vehicles/'
+);
