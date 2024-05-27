@@ -1,10 +1,10 @@
 const invModel = require("../models/inventory-model")
-const Util = {}
+const util = {}
 
 /* ************************
  * Constructs the nav HTML unordered list
  ************************** */
-Util.getNav = async function (req, res, next) {
+util.getNav = async function (req, res, next) {
   let data = await invModel.getClassifications()
 //   console.log(data)
   let list = "<ul id='navigate'>"
@@ -28,7 +28,7 @@ Util.getNav = async function (req, res, next) {
 /* **************************************
 * Build the classification view HTML
 * ************************************ */
-Util.buildClassificationGrid = async function(data){
+util.buildClassificationGrid = async function(data){
     let grid
     if(data.length > 0){
       grid = '<ul id="inv-display">'
@@ -59,4 +59,22 @@ Util.buildClassificationGrid = async function(data){
   }
 
 
-module.exports = Util
+// DETAIL PAGE
+
+util.buildVehicleDetailsHTML = async function (vehicleData) {
+    return `
+      <div class="vehicle-details">
+        <img src="${vehicleData.inv_image}" alt="${vehicleData.inv_make} ${vehicleData.inv_model}">
+        <div class="details">
+            <h2>${vehicleData.inv_make} ${vehicleData.inv_model}</h2>
+            <p><strong>Year:</strong> ${vehicleData.inv_year}</p>
+            <p><strong>Price:</strong> $${new Intl.NumberFormat('en-US').format(vehicleData.inv_price)}</p>
+            <p><strong>Mileage:</strong> ${new Intl.NumberFormat('en-US').format(vehicleData.inv_miles)}</p>
+            <p><strong>Description:</strong> ${vehicleData.inv_description}</p>
+            <!-- Add more details as needed -->
+        </div>
+      </div>
+    `;
+};
+
+module.exports = util;
