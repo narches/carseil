@@ -1,0 +1,20 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<% if (title) { %>
+<h2><%= title %></h2>
+<% } else {res.redirect('/')} %>
+
+<h4><%- messages() %></h4>
+
+<form id="loginForm" action="/mgt/adclass" method="post">
+    <fieldset>
+        <label class="top"> Classificatiion Name* <input type="text" id="invMake" name="inv_make" required pattern="^[A-Za-z]+$" title="Name must be alphabetic characters only with no space"></label>
+        <br>
+        <input type="submit" value="Add Classification" class="submitBtn">  
+    </fieldset>
+      
+  </form>

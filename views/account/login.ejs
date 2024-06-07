@@ -1,0 +1,20 @@
+
+
+<h4><%- messages() %></h4>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<form id="loginForm" action="/account/login" method="post">
+    <fieldset>
+        <label class="top">Email* <input type="email" id="account_ëmail" name="account_email" required pattern="[a-zA-Z0-9._%+-]+@byui\.edu$" title="Email"></label>
+        <label class="top" for="accountPassword">Password <input type="password" name="account_password" id="account_password" name="password" required minlength="12" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{12,}$" title=""></label>
+        <br>
+        <input type="submit" value="Login" class="submitBtn">  
+    </fieldset>
+      
+      <label class="sbs"> No Account? <a href="/account/signup" > Sign Up </a></label>
+  </form>

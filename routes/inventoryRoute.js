@@ -10,4 +10,8 @@ router.get("/type/:classificationId", invController.buildByClassificationId);
 // Route to handle requests for displaying details of a specific vehicle
 router.get("/detail/:id", invController.getVehicleDetails);
 
+
+
+
+
 module.exports = router;

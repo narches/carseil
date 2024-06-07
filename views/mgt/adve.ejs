@@ -1,0 +1,49 @@
+<br>
+<br>
+<% if (title) { %>
+<h2><%= title %></h2>
+<% } else {res.redirect('/')} %>
+
+<% messages() %>
+
+
+<!-- Display errors if needed -->
+<% if (errors) { %>
+    <ul class="notice">
+        <% errors.array().forEach(error => { %>
+            <% console.log(error.msg); %>
+            <% if(error.msg != "Invalid value") { %>
+                <li><%= error.msg %></li>
+            <% } %>
+        <%  }) %>
+   </ul>
+<% } %>
+
+
+<form id="registerForm" action="/mgt/adve" method="post">
+    <fieldset>
+        <label class="top">Classificatiion
+                <select name="subject">
+                    <option value="#"> Select Vehicle &#9662</option>
+                    <option value="#">Custom</option>
+                    <option value="#">Sedan</option>
+                    <option value="#">Sport</option>
+                    <option value="#">SUV</option>
+                    <option value="#">Truck</option>
+                    <option value="#">NewCar</option>
+                </select>
+        </label>
+        <label class="top">  Make* <input type="text" id="invMake" name="inv_make" required value="<%= locals.inv_make %>"></label>
+        <label class="top">  Model* <input type="text" id="invModel" name="inv_model" required value="<%= locals.inv_model %>" ></label>
+        <label class="top">  Description* <input type="textarea" id="invDescription" name="inv_description" required value="<%= locals.account_email %>"></label>
+        <label class="top">  Image Path* <input type="file" id="imagePath" name="inv_image" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{12,}$"></label>
+        <label class="top">  Thumbnail Path* <input type="file" id="imagePath" name="inv_image" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{12,}$"></label>
+        <label class="top">  Price* <input type="number" id="invPrice" name="inv_price" required></label>
+        <label class="top">  Year* <input type="number" id="invYear" name="inv_year" required></label>
+        <label class="top">  Miles* <input type="number" id="invMiles" name="inv_miles" required></label>
+        <label class="top">  Color* <input type="text" id="invColor" name="inv_color" required></label>
+        <br>
+        <input type="submit" value="Add Vehicle" class="submitBtn">
+    </fieldset>  
+</form>
+

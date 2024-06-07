@@ -61,7 +61,7 @@ VALUES ('Custom'),
        ('Sport'),
        ('SUV'),
        ('Truck'),
-       ('Sedan');
+       ('Sedan'),
 
 -- Data for table `inventory`
 
